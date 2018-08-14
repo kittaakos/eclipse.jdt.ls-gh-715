@@ -2,9 +2,9 @@
 Customized Java LS with semantic highlighting capabilities
 
 ### Building a new version of the LS from eclipse.jdt.ls:
- - Execute the following in the root of the eclipe.jdt.ls
 ```
-./mvnw clean verify && cd org.eclipse.jdt.ls.product/target/repository/ && tar -czf ../../../jdt-language-server-latest.tar.gz ./config_linux/ ./config_mac/ ./config_win/ ./plugins/ ./features/ && cd ../../..
+./update.sh \
+&& git add . \
+&& git commit -s -m "Updated the JDT LS version." \
+&& git push
 ```
- - Copy the arhive here.
- - Push.
