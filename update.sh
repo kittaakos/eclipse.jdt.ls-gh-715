@@ -4,6 +4,7 @@
 rm -rf ./eclipse.jdt.ls/ \
 && git clone --single-branch -b GH-715 https://github.com/kittaakos/eclipse.jdt.ls.git \
 && cd ./eclipse.jdt.ls/ \
+&& git rev-parse --short HEAD \
 && ./mvnw -X clean verify \
 && cd ./org.eclipse.jdt.ls.product/target/repository/ \
 && tar -czf ../../../../jdt-language-server-latest.tar.gz ./config_linux/ ./config_mac/ ./config_win/ ./plugins/ ./features/ \
